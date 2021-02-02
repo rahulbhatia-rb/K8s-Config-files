@@ -9,5 +9,3 @@ spec:
                 - name: mycontainer
                   image: vimal13/apache-webserver-php
 
-        expose: 80
-        type: NodePort
