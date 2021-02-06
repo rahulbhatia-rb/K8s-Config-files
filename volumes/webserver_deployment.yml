@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: web-server-deployment
+  name: web-server-deployment-1
 spec:
   selector:
     matchLabels:
-      app: web-server
+      app: web-server-1
   replicas: 2 # tells deployment to run 2 pods matching the template
   template:
     metadata:
       labels:
-        app: web-server
+        app: web-server-1
     spec:
       containers:
-      - name: web-server
+      - name: web-server-1
         image: vimal13/apache-webserver-php
         ports:
         - containerPort: 80
@@ -23,5 +23,5 @@ spec:
       volumes:
       - name: mypod-pvc
         persistentVolumeClaim:
-          claimName: pvc-local
+          claimName: pvc1-local
 

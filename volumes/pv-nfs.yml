@@ -8,7 +8,8 @@ spec:
         accessModes:
                 - ReadWriteOnce
         capacity:
-                storage: 1Gi
+                storage: 2Gi
         persistentVolumeReclaimPolicy: Delete
-        hostPath:
-                path: /tmp/data
+        nfs:
+                server: 32.239.253.147
+                path: /data1

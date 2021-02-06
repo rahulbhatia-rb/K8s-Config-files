@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: PersistentVolume
 metadata:
-        name: "pv-local-delete"
+        name: "pv-local"
         labels:
                 volume: local
 spec:
@@ -9,6 +9,6 @@ spec:
                 - ReadWriteOnce
         capacity:
                 storage: 1Gi
-        persistentVolumeReclaimPolicy: Delete
+        PersistentVolumeReclaimPolicy: recycle
         hostPath:
                 path: /tmp/data
